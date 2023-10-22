@@ -1,0 +1,64 @@
+function reverseArr1(Arr) { 
+    return Arr.reverse();
+  }
+  const currentArr = [45, 2, 1, 85, 59];
+  const reversedArr = reverseArr1(currentArr);
+  
+  console.log(reversedArr1);
+
+//  ----------------------------------------------------------------------- 
+
+function maxNumber(numbers) {
+    return Math.max(...numbers);
+  }
+  
+  const numbers = [45, 1, 8574, 2, 33, 999];
+  const maxValue = maxNumber(numbers);
+  
+  console.log(maxValue);
+
+//   ---------------------------------------------------
+function getFibonachi(number) {
+    return number <= 1 ? number : getFibonachi(number - 1) + getFibonachi(number - 2);
+};
+
+console.log(getFibonachi(54))
+
+// ------------------------------------------------------
+let number1 = 3487;
+let number2 = 3794;
+
+const strNumber1 = number1.toString();
+const strNumber2 = number2.toString();
+  
+const result = strNumber1.match(strNumber2);
+  
+console.log(result)
+  
+//-----------------------------------------------------
+
+const number = [1, 2, 80, 33, 65, 3, 99]
+
+number.sort((a, b) => {
+    if (a > b) return 1;
+    if (a < b) return -1;
+    else return 0;
+})
+
+console.log(number)
+
+number.sort((a, b) => {
+    if (a < b) return 1;
+    if (a > b) return -1;
+    else return 0;
+})
+console.log(number)
+// --------------------------------------------------------
+
+const arr_1 = [1, 2, 3, 5, 1, 6, 2, 5, 6, 7];
+
+let arr_2 = arr_1.filter((item, index) => {
+    return arr_1.indexOf(item) === index
+});
+console.log(arr_2);
+// ---------------------------------------------------------
