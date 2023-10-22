@@ -1,0 +1,54 @@
+function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min) + min); 
+  }
+
+let result_user1 = 0
+let result_user2 = 0
+
+let first_result_user1 = getRandomInt(1, 6)
+console.log(`Результат первого броска user1 ${first_result_user1}`)
+
+let first_result_user2 = getRandomInt(1, 6)
+console.log(`Результат первого броска user2 ${first_result_user2}`)
+
+let second_result_user1 = getRandomInt(1, 6)
+console.log(`Результат второго броска user1 ${second_result_user1}`)
+
+let second_result_user2 = getRandomInt(1, 6)
+console.log(`Результат второго броска user2 ${second_result_user2}`)
+
+let third_result_user1 = getRandomInt(1, 6)
+console.log(`Результат третьего броска user1 ${third_result_user1}`)
+
+let third_result_user2 = getRandomInt(1, 6)
+console.log(`Результат третьего броска user2 ${third_result_user2}`)
+
+result_user1 = first_result_user1 + second_result_user1 + third_result_user1
+
+result_user2 = first_result_user2 + second_result_user2 + third_result_user2
+
+console.log(`Общий результат user1 ${result_user1}`)
+console.log(`Общий результат user2 ${result_user2}`)
+
+// ============================================================================================================
+
+let date = new Date('January 01, 2000 00:00:00'); 
+let currentDate = new Date(); 
+let fridayCount = 0;
+
+function Fridays13() {
+
+    while (date <= currentDate) {
+        if (date.getDay() === 5 && date.getDate() === 13) {
+            fridayCount++;
+        }
+        date.setDate(date.getDate() + 1); 
+    }
+
+    return fridayCount;
+}
+
+let howMuchFridays = Fridays13();
+console.log('Количество пятниц13 с 01.01.2000 по 13.10.2023: ' + howMuchFridays);
